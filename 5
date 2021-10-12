@@ -1,0 +1,101 @@
+/*
+// Номер 5.1
+#include <iostream>
+#include <math.h>
+
+int main()
+{
+    //объявляем переменные и создаем переменную для вывода ответа
+    double  x1, y1, x2, y2;
+    std::cout << "Write coordinates x1, y1, x2, y2" "\n";
+    std::cin >> x1 >> y1>> x2 >> y2;
+    double L;
+    L = sqrt((x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2)); // находим расстояние между двумя точками с заданными координатами (x1, y1) и (x2, y2) и зададим получившееся значение переменной L
+    std::cout << "Lenght=" << L;
+    //выводим на экран результат. Он верный. Программа работает правильно.
+    return 0;
+}
+*/
+/*
+// Номер 5.2
+#include <iostream>
+#include <math.h>
+
+int main()
+{
+    //объявляем переменные и создаем переменные для вывода ответов
+    double A, B, C;
+    std::cout << "Write coordinates points A, B, C on the one line" "\n";
+    std::cin >> A >> B >> C;
+    double AC, BC, Sum;
+    AC = abs(A-C); // находим длинны отрезков AC и BС, а так же их сумму и задаём их значения в аналогичные переменные
+    BC = abs(B-C);
+    Sum = AC+BC;
+    std::cout << "AC=" << AC << "\n"  << "BC=" << BC << "\n" << "Sum=" << Sum << "\n" ;
+    //выводим на экран результаты. Они верны. Программа работает правильно.
+    return 0;
+}
+*/
+/*
+// Номер 5.3
+#include <iostream>
+#include <math.h>
+
+int main()
+{
+    //объявляем переменные
+    double A, B, C;
+    std::cout << "Write coordinates points A, B, C on the one line where C is between " "\n";
+    std::cin >> A >> B >> C;
+    std::cout << "product of line lengths AC and BC=" << abs(a - c) * abs(b - c) << endl; //Выводим результат - произведение расстояний длин отрезков.
+return 0;
+}
+*/
+/*
+// Номер 5.4
+#include <iostream>
+#include <math.h>
+
+int main()
+{
+    //объявляем переменные и создаем переменные для вывода ответов
+    x1, y1, x2, y2;
+    std::cout << "Write coordinates x1, y1, x2, y2" "\n";
+    std::cin >> x1 >> y1>> x2 >> y2;
+     double S, P;
+      S = abs(x2 - x1) * abs(y2 - y1);
+      P = 2 * (abs(x2 - x1) + abs(y2 - y1));
+    std::cout << "P=" <<  P << "\n" << "S=" <<  S << "\n";  //выводим на экран результаты. 
+return 0;
+}
+*/
+/*
+// Номер 5.5
+#include<iostream>
+#include<cmath>
+using namespace std;
+float s(float x1, float x2, float y1, float y2)          //создание функции
+{
+return (sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1)));          //вычисление расстояния между точками
+}
+int main()
+{
+float x1, x2, x3, y1, y2, y3, a, b, c, p;
+cout<<"Enter the coordinates of the points (х1, у1), (х2, у2), (x3, y3) of triangle<<endl;
+cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
+if (((x1 == x2) and (x2 == x3)) or ((y1 == y2) and (y2 == y3)))          //если точки стоят в одну линию
+{
+ cout << "triangle? no." << endl;
+}
+else
+{
+ a = s(x1, x2, y1, y2);
+ b = s(x2, x3, y2, y3);
+ c = s(x3, x1, y3, y1);
+ p = (a + b + c) / 2;        //полупериметр
+ cout << "P = "<< p * 2 << endl;          //вывод периметра
+ cout << "S = "<< sqrt(p * (p - a) * (p - b) * (p - c)) << endl;         //вычисление площади треугольника через формулу герона
+}
+return 0;
+}
+*/
