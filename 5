@@ -47,8 +47,8 @@ int main()
     double A, B, C;
     std::cout << "Write coordinates points A, B, C on the one line where C is between " "\n";
     std::cin >> A >> B >> C;
-    std::cout << "product of line lengths AC and BC=" << abs(a - c) * abs(b - c) << endl; //Выводим результат - произведение расстояний длин отрезков.
-return 0;
+    std::cout << "product of line lengths AC and BC=" << abs(A - C) * abs(B - C); //Выводим результат - произведение расстояний длин отрезков.
+    return 0;
 }
 */
 /*
@@ -59,7 +59,7 @@ return 0;
 int main()
 {
     //объявляем переменные и создаем переменные для вывода ответов
-    x1, y1, x2, y2;
+    int x1, y1, x2, y2;
     std::cout << "Write coordinates x1, y1, x2, y2" "\n";
     std::cin >> x1 >> y1>> x2 >> y2;
      double S, P;
@@ -73,29 +73,25 @@ return 0;
 // Номер 5.5
 #include<iostream>
 #include<cmath>
-using namespace std;
-float s(float x1, float x2, float y1, float y2)          //создание функции
-{
-return (sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1)));          //вычисление расстояния между точками
-}
+#include <math.h>
 int main()
 {
-float x1, x2, x3, y1, y2, y3, a, b, c, p;
-cout<<"Enter the coordinates of the points (х1, у1), (х2, у2), (x3, y3) of triangle<<endl;
-cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
-if (((x1 == x2) and (x2 == x3)) or ((y1 == y2) and (y2 == y3)))          //если точки стоят в одну линию
-{
- cout << "triangle? no." << endl;
-}
-else
-{
- a = s(x1, x2, y1, y2);
- b = s(x2, x3, y2, y3);
- c = s(x3, x1, y3, y1);
- p = (a + b + c) / 2;        //полупериметр
- cout << "P = "<< p * 2 << endl;          //вывод периметра
- cout << "S = "<< sqrt(p * (p - a) * (p - b) * (p - c)) << endl;         //вычисление площади треугольника через формулу герона
-}
-return 0;
-}
+    int  x1, x2, x3, y1, y2, y3;
+    std::cout << "Write the coordinates of the points (x1, y1), (x2, y2), (x3, y3) of triangle"  "\n";
+    std::cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
+    double  a, b, c, p, S;
+    if (((x1 == x2) and (x2 == x3)) or ((y1 == y2) and (y2 == y3)))          //если точки стоят в одну линию, то это не треугольник
+    {
+        std::cout << "not a triangle";
+    }
+    else
+    {
+    a = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
+    b = sqrt(pow((x3 - x2), 2) + pow((y3 - y2), 2));
+    c = sqrt(pow((x3 - x1), 2) + pow((y3 - y1), 2));
+    p = (a + b + c) / 2;        //полупериметр
+    S = sqrt(p * (p - a) * (p - b) * (p - c)); //вычисление площади треугольника через формулу герона;
+    std::cout << "P=" << p * 2 << "\n" << "S=" << S << "\n";  //вывод ответов       
+    }
+    return 0;
 */
