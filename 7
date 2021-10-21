@@ -1,0 +1,123 @@
+//7.1. Дано значение угла α в градусах (0 < α < 360). Определить значение этого же угла в радианах, учитывая, что 180◦ = π радианов.
+/*
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    double alf, rad;
+    cout << "Enter angle alfa in degrees (from 0 to 360)" << endl;
+    cin >> alf;
+    if (alf > 360 || alf < 0) {
+        cout << "alfa is not an angle" << endl;
+        return 0;
+    }
+    rad = alf * 3.14 / 180;
+    cout << alf << " = " << rad << " radian" << endl;
+    return 0;
+}
+*/
+
+//7.2 Дано значение угла α в радианах (0 < α < 2•π). Определить значение этого же угла в градусах, учитывая, что 180◦ = π радианов
+/*
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    double alf, rad;
+    cout << "Enter angle alfa in radians (from 0 to 2*pi)" << endl;
+    cin >> rad;
+    if (rad > 2 * 3.14 || rad < 0) {
+        cout << "alfa is not an angle" << endl;
+        return 0;
+    }
+    alf = rad * 180 / 3.14;
+    cout << rad << " radian = " << alf << " degrees" << endl;
+    return 0;
+}
+*/
+
+//7.3 Известно, что X кг конфет стоит A рублей. Определить, сколько стоит 1 кг и Y кг этих же конфет.
+/*
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    double x, a, y;
+    cout << "write x (kg), a (the cost of x kg), y (kg;  plus 1 kg which you want to know the cost" << endl;
+    cin >> x >> a >> y;
+    
+    cout << 1 + a*y/x << " is the cost of y+1 kg" << endl;
+    return 0;
+}
+*/
+
+//7.4 Скорость первого автомобиля V1 км/ч, второго — V2 км/ч, расстояние между ними S км. Определить расстояние между ними через T часов, если автомобили удаляются друг от друга.
+/*
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    double v1, v2, s, t;
+    cout << "write speed of the 1st car, of the 2nd one, the distance between them, the time of their movements from each other" << endl;
+    cin >> v1 >> v2 >> s >> t;
+    if (v1 < 0 || v2 < 0 || t < 0) {
+        cout << "the speed or the time is not real" << endl;
+        return 0;
+    }
+    cout << s + t * (v1 + v2) << " is distance between them after t time" << endl;
+    return 0;
+}
+*/
+
+//7.5 Решить линейное уравнение A•x + B = 0, заданное своими коэффициентами A и B (коэффициент A не равен 0).
+/*
+#include <iostream>
+using namespace std;
+int main()
+{
+    float a, b;
+    cout << "write A(isn't 0), B" << endl;
+    cin >> a >> b;
+    if (a == 0) {
+        cout << "A is 0, it's not avaible here " << endl;   
+        return 0;
+    }
+    cout << "x = " << -b / a << endl;   // решение уравнения вида  ах + в = 0
+    return 0;
+}
+*/
+
+//7.6 Найти решение системы линейных уравнений вида 
+A1•x + B1•y = C1, 
+A2•x + B2•y = C2,
+
+/*
+#include <iostream>
+using namespace std;
+int main()
+{
+    float  a1, b1, c1, a2, b2, c2;
+    cout << "write A1, B1, C1, A2, B2, C1" << endl;
+    cin >> a1 >> b1 >> c1 >> a2 >> b2 >> c2;
+    if ((a1 * b2 - b1 * a2) == 0) //главный определитель = 0
+    {
+        if (c1 / c2 == a1 / a2)
+        {
+            cout << "belongs R" << endl; 
+        }
+        else
+        {
+            cout << "belongs to empty set" << endl;
+        }
+    }
+    else
+    {
+        cout << "x = " << -(b1 * c2 - c1 * b2) / (a1 * b2 - b1 * a2) << ", y = " << (a1 * c2 - c1 * a2) / (a1 * b2 - b1 * a2) << endl;
+    }
+    return 0;
+}
+*/
