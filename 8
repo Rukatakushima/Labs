@@ -1,0 +1,63 @@
+//8.1. Дан размер файла в байтах. Найти количество полных килобайтов, которые занимает данный файл
+
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    double b;
+    int k;
+    cout << "write bytes" << endl;
+    cin >> b;
+    if (b < 0) {
+        cout << "bytes with minus???" << endl;
+        return 0;
+    }
+    k = b / 1024;
+    cout <<  "kilobytes= " <<  k  << endl;
+    return 0;
+}
+
+//8.2. Даны целые положительные числа A и B (A > B). На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений). Найти количество отрезков B, размещенных на отрезке A.
+
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    double a,b;
+    int k;
+    double k1;
+    cout << "A and B (A and B >0 and A>B)" << endl;
+    cin >> a >> b;
+    if (b < 0 || a < 0 || a<b) {
+        cout << "please, read the description" << endl;
+        return 0;
+    }
+    k = a / b;
+    k1 = a / b;
+    cout <<  "whole number of line segments B placed on line segment A = " <<  k  << "; number of line segments B placed on line segment A = " << k1 << endl;
+    return 0;
+}
+
+//8.3 Даны целые положительные числа A и B (A > B). На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений). Найти длину незанятой части отрезка A.
+
+/+++++++++++++++++++++++++++++++
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    double a,b;
+    int k;
+    double k1;
+    cout << "A and B (A and B >0 and A>B)" << endl;
+    cin >> a >> b;
+    if (b < 0 || a < 0 || a<b) {
+        cout << "please, read the description" << endl;
+        return 0;
+    }
+    k1 = a - a / b;
+    cout <<  "length of unoccupied part of segment A = " << k1 << endl;
+    return 0;
+}
