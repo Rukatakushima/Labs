@@ -1,0 +1,83 @@
+//9.1 С начала суток прошло N секунд (N — целое). Найти количество секунд, прошедших с начала последней минуты.
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	int n;
+	cout << "Enter the N (number of seconds)" << endl;
+	cin >> n;
+	cout << n % 60 << endl; 
+	return 0;
+}
+
+//9.2 Дни недели пронумерованы следующим образом: 0 — воскресенье, 1 — понедельник, 2 — вторник, . . . , 6 — суббота. Дано целое число K, лежащее в диапазоне 1–365. Определить номер дня недели для K-го дня года, если известно, что в этом году 1 января было понедельником..
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	int n;
+	cout << "Write number of day" << endl;
+	cin >> n;
+	if (n > 366 || n < 1) {
+		cout << "please, read the description" << endl;
+		return 0;
+	}
+	cout << n % 7 << " - the number of the day of the week for the K-th day of the year " << endl;      //вычисление номера дня недели
+	return 0;
+}
+
+//9.3 Дни недели пронумерованы следующим образом: 1 — понедельник, 2 — вторник, . . . , 6 — суббота, 7 — воскресенье. Дано целое число K, лежащее в диапазоне 1–365, и целое число N, лежащее в диапазоне 1–7. Определить номер дня недели для K-го дня года, если известно, что в этом году 1 января было днем недели с номером N
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	int k, n, l;
+	cout << "Write N  and then K" << endl;
+	cin >> n >> k;                    //ввод номера недели(1 янв) и день
+	if (k > 366 || k < 1 || n < 1 || n > 7) {
+		cout << "please, read the description" << endl;
+		return 0;
+	}
+	l = (k + n - 1) % 7;
+	if (l == 0)
+	{
+		l = 7;
+	}
+	cout << l << " - the number of the day of the week for the K-th day of the year " << endl;      //вычисление номера дня недели
+	return 0;
+}
+
+//9.4 Даны целые положительные числа A, B, C. На прямоугольнике размера A × B размещено максимально возможное количество квадратов со стороной C (без наложений). Найти количество квадратов, размещенных на прямоугольнике, а также площадь незанятой части прямоугольника.
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	int a, b, c;
+	cout << " write A, B, C " << endl;
+	cin >> a >> b >> c;
+	cout << (a / c) * (b / c) << " C in AB " << endl;
+	cout << "Empty space = " << a * b - (a / c) * (b / c) * c * c << endl; 
+	return 0;
+}
+
+//9.5 Дан номер некоторого года (целое положительное число). Определить соответствующий ему номер столетия, учитывая, что, к примеру, началом 20 столетия был 1901 год
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	int y;
+	cout << "year" << endl;
+	cin >> y;
+	cout << "the centure is " << (y + 100 - (y + 100)%100)/100;
+	return 0;
+}
