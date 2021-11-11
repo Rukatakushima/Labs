@@ -42,14 +42,12 @@ int main()
 
 //8.3 Даны целые положительные числа A и B (A > B). На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений). Найти длину незанятой части отрезка A.
 
-/+++++++++++++++++++++++++++++++
 #include <iostream>
 
 using namespace std;
 int main()
 {
     double a,b;
-    int k;
     double k1;
     cout << "A and B (A and B >0 and A>B)" << endl;
     cin >> a >> b;
@@ -61,3 +59,40 @@ int main()
     cout <<  "length of unoccupied part of segment A = " << k1 << endl;
     return 0;
 }
+
+//8.4 Дано двузначное число. Вывести число, полученное при перестановке цифр исходного числа.
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+    int k;
+    cout << "write 2-digit  number" << endl;
+    cin >> k;
+    if (k > 100 || k < 10 ) {
+        cout << "please, read the description" << endl;
+        return 0;
+    }
+    cout << k%10 << k/10 << endl;
+    return 0;
+}
+
+//8.5 Дано трехзначное число. В нем зачеркнули первую слева цифру и приписали ее справа. Вывести полученное число
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+    int k;
+    cout << "write 3-digit  number" << endl;
+    cin >> k;
+    if (k > 1000 || k < 100 ) {
+        cout << "please, read the description" << endl;
+        return 0;
+    }
+    cout << k%100 << k / 100 << endl;
+    return 0;
+}
+
