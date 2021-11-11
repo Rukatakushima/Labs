@@ -1,0 +1,23 @@
+//10.1
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    double b, a;
+    cout << "write A and B (to ckeck if A > 2 and B <= 3)" << endl;
+    cin >> a >> b;
+    if (a>2) {
+        cout << "A > 2 (TRUE FOR A)" << endl;
+    } else {
+    cout << "A <= 2 (FALSE FOR A)" << endl;
+    }
+    if (b <= 3) {
+        cout << "B <= 3 (TRUE FOR B)" << endl;
+        return 0;
+    }
+    else {
+        cout << "B > 3 (FALSE FOR B)" << endl;
+        return 0;
+    }
+}
