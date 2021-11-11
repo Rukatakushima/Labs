@@ -5,7 +5,7 @@
 using namespace std;
 int main()
 {
-    double b;
+    int b;
     int k;
     cout << "write bytes" << endl;
     cin >> b;
@@ -14,7 +14,10 @@ int main()
         return 0;
     }
     k = b / 1024;
-    cout <<  "kilobytes= " <<  k  << endl;
+    if (b % 1024 > 0) {
+        k = k + 1;
+    }
+    cout << "kilobytes= " << k << endl;
     return 0;
 }
 
@@ -43,20 +46,20 @@ int main()
 //8.3 Даны целые положительные числа A и B (A > B). На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений). Найти длину незанятой части отрезка A.
 
 #include <iostream>
-
+#include<cmath>
 using namespace std;
 int main()
 {
-    double a,b;
-    double k1;
+    int a, b;
+    int k1;
     cout << "A and B (A and B >0 and A>B)" << endl;
     cin >> a >> b;
-    if (b < 0 || a < 0 || a<b) {
+    if (b < 0 || a < 0 || a < b) {
         cout << "please, read the description" << endl;
         return 0;
     }
-    k1 = a - a / b;
-    cout <<  "length of unoccupied part of segment A = " << k1 << endl;
+    k1 = a % b;
+    cout << "length of unoccupied part of segment A = " << k1 << endl;
     return 0;
 }
 
@@ -88,11 +91,11 @@ int main()
     int k;
     cout << "write 3-digit  number" << endl;
     cin >> k;
-    if (k > 1000 || k < 100 ) {
+    if (k > 1000 || k < 100) {
         cout << "please, read the description" << endl;
         return 0;
     }
-    cout << k%100 << k / 100 << endl;
+    cout << k % 10 << (k / 10) % 10 << k / 100 << endl;
     return 0;
 }
 
