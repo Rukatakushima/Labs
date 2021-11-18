@@ -29,7 +29,7 @@ using namespace std;
 int main()
 {
     double b, a, c;
-    cout << "write A, B and C (to ckeck if A < B < C)" << endl;
+    cout << "write A, B and C (to check if A < B < C)" << endl;
     cin >> a >> b >> c;
     if (a < b && b < c) {
         cout << " A < B < C (TRUE)" << endl;
@@ -89,12 +89,12 @@ int main()
     int a;
     cout << "write number" << endl;
     cin >> a;
-    if (a < 100 || a>999) {
-        cout << "it's not a three - digit number" << endl;
+    if (a < 1000 || a>9999) {
+        cout << "it's not a 4 - digit number" << endl;
         return 0;
     }
     else {
-        if (a%10 == a/100) {
+        if (a%10 == a/1000) {
             cout << "YES" << endl;
             return 0;
         }
@@ -110,7 +110,7 @@ using namespace std;
 int main()
 {
     double a,b,c;
-    cout << "a, b, c (the sides of a triangle" << endl;
+    cout << "a, b, c (the sides of a triangle)" << endl;
     cin >> a >> b >> c;
     if (a < b+c && a> (b-c||c-b)) {
         cout << "it's a triangle" << endl;
@@ -135,7 +135,7 @@ using namespace std;
 int main()
 {
     double a,b,c;
-    cout << "a, b, c (the sides of a triangle" << endl;
+    cout << "a, b, c (the sides of a triangle)" << endl;
     cin >> a >> b >> c;
     if (a < b+c && a> (b-c||c-b)) {
         cout << "it's a triangle(TRUE)" << endl;
