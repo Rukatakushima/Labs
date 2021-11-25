@@ -1,0 +1,171 @@
+//1.Даны две переменные целого типа: A и B. Если их значения не равны, то присвоить каждой переменной большее из этих значений, а если равны, то присвоить переменным нулевые значения. Вывести новые значения переменных A и B.
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	int a, b;
+	cout<< "Write A and B." <<endl;
+	cin >> a >> b;
+	if (a == b) 
+	{
+		a = 0;
+		b = 0;
+	}
+	else
+	{
+		a = max(a, b);
+		b = max(a, b);
+	}
+	cout << "A =" << a << ", B = " << b;
+	return 0;
+}
+
+//2. Даны три числа. Найти сумму двух наибольших из них
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	int a, b, c, m;
+	cout << "Write 3 numbers." << endl;
+	cin >> a >> b >> c;
+	m= min(min(a, b), min(b, c));
+	cout << a+b+c-m;
+	return 0;
+}
+
+//3. На плоскости расположены три точки: A, B, C. Определить, какая из двух последних точек (B или C) расположена ближе к A, и вывести эту точку и ее расстояние от точки A.
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	float a1, a2, b1, b2, c1, c2, ac, ab;
+	cout << "Write coordinates of A, B, C (with x, y at each)" << endl;
+	cin >> a1 >> a2 >> b1 >> b2 >> c1 >> c2;
+	ab = sqrt((a1 - b1) * (a1 - b1) + (a2 - b2) * (a2 - b2));               
+	ac = sqrt((a1 - c1) * (a1 - c1) + (a2 - c2) * (a2 - c2));
+	if (ac > ab) {
+		cout << b1 << " " << b2 << " coordinates of B as point B is located closer to A; distance AB = " << ab;
+		return 0;
+	}
+	if (ac < ab) {
+		cout << c1 << " " << c2 << " coordinates of C as point C is located closer to A; distance AB = " << ac;
+		return 0;
+	}
+	if (ac = ab) {
+		cout << "C and B is located to A at the same distance = " << ac;
+		return 0;
+	}
+}
+
+//4. Даны координаты точки, не лежащей на координатных осях OX и OY. Определить номер координатной четверти, в которой находится данная точка
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+	int x, y;
+	cout << "Write x and y of the point" << endl;
+	cin >> x >> y;
+	if (x > 0)
+	{
+		if (y > 0)
+		{
+			cout << "1st quarter" << endl;
+		}
+		else
+		{
+			cout << "4th quarter" << endl;
+		}
+	}
+	else
+	{
+		if (y > 0)
+		{
+			cout << "2nd quarter" << endl;
+		}
+		else
+		{
+			cout << "3rd quarter" << endl;
+		}
+	}
+}
+
+// 5. Дано целое число. Вывести его строку-описание вида «отрицательное четное число», «нулевое число», «положительное нечетное число» и т. д.
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+	int a;
+	cout << "Write a number" << endl;
+	cin >> a;
+	if (a == 0)
+	{
+		cout << "zero number";
+	}
+	else
+	{
+		if (a > 0)                       
+		{
+			cout << "positive number and ";
+		}
+		else
+		{
+			cout << "negative number and ";
+		}
+		if (a % 2 == 0)                     
+		{
+			cout << "even number";
+		}
+		else
+		{
+			cout << "odd number";
+		}
+	}
+	return 0;
+}
+
+// 6. Дано целое число, лежащее в диапазоне 1–999. Вывести его строкуописание вида «четное двузначное число», «нечетное трехзначное число» и т. д.
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+	int a;
+	cout << "Write the number isn't in the range: 1-999" << endl;
+	cin >> a;
+	if (a < 1 || a>999) {
+		cout << "the number isn't in the range";
+			return 0;
+	}
+	if (a % 2 == 0)                        
+	{
+		cout << "even and ";
+	}
+	else
+	{
+		cout << "odd and ";
+	}
+	if (a / 100 != 0)                         
+	{
+		cout << "three-digit number";
+	}
+	else
+	{
+		if (a / 10 != 0)              
+		{
+			cout << "two-digit number";
+		}
+		else
+		{
+			cout << "one-figure number";
+		}
+	}
+	return 0;
+}
