@@ -131,7 +131,7 @@ string days(int d)
 	}
 
 }
-string month(int a)             //функия перевода заданного числа в месяц
+string month(int a)          
 {
 	if (a == 1)
 	{
@@ -193,37 +193,67 @@ int main()
 */
 //12.2
 /*
-int main()
-{
-	int n, c, x, i;
-	cout << "Write  the number of commands and commands" << endl;
-	cin >> n;
-	x = 0;
-	for (i = 0; i < n; i++)
-	{
-		cin >> c;
-		x = x + c;
-	}
-
-	x = ((x % 4) + 4) % 4; // +4 и второе %4, так как может получиться направление с - (т.е. в др. сторону)
-	cout << ((x % 4) + 4) % 4 << "The direction is ";
-	if (x == 0)
-	{
-		cout << "N (north)" << endl;
-	}
-	if (x == 1)
-	{
-		cout << "W (west)" << endl;
-	}
-	if (x == 2)
-	{
-		cout << "S (south)" << endl;
-	}
-	if (x == 3)
-	{
-		cout << "E (east)" << endl;
-	}
-	return 0;
+int main() {
+    int n;
+    char c;
+    cout << "Write direction ";
+    cin >> c;
+    cout << "Write operation ";
+    cin >> n;
+    switch (c) {
+    case 'N':
+        switch (n) {
+        case 1:
+            c = 'W';
+            break;
+        case 0:
+            c = 'N';
+            break;
+        case -1:
+            c = 'E';
+            break;
+        }
+        break;
+    case 'E':
+        switch (n) {
+        case 1:
+            c = 'N';
+            break;
+        case 0:
+            c = 'E';
+            break;
+        case -1:
+            c = 'S';
+            break;
+        }
+    case 'S':
+        switch (n) {
+        case 1:
+            c = 'E';
+            break;
+        case 0:
+            c = 'S';
+            break;
+        case -1:
+            c = 'W';
+            break;
+        }
+        break;
+    case 'W':
+        switch (n) {
+        case 1:
+            c = 'S';
+            break;
+        case 0:
+            c = 'W';
+            break;
+        case -1:
+            c = 'N';
+            break;
+        }
+    }
+    cout << c;
+    return 0;
 }
 */
 //12.3
