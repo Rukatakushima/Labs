@@ -226,3 +226,459 @@ int main()
 	return 0;
 }
 */
+//12.3
+/*
+string digit(int b)
+	{
+		if (b == 0)
+		{
+			return "";
+		}
+		if (b == 1)
+		{
+			return "one";
+		}
+		if (b == 2)
+		{
+			return  "two";
+		}
+		if (b == 3)
+		{
+			return  "three";
+		}
+		if (b == 4)
+		{
+			return  "four";
+		}
+		if (b == 5)
+		{
+			return  "five";
+		}
+		if (b == 6)
+		{
+			return  "six";
+		}
+		if (b == 7)
+		{
+			return  "seven";
+		}
+		if (b == 8)
+		{
+			return  "eight";
+		}
+		if (b == 9)
+		{
+			return  "nine";
+		}
+	}
+string numb(int a, int b)
+{
+	if (a == 1){
+		if (b == 0)
+		{
+			return  "ten";
+		}
+		if (b == 1)
+		{
+			return  "eleven";
+		}
+		if (b == 2)
+		{
+			return  "twelve";
+		}
+		if (b == 3)
+		{
+			return  "thirteen";
+		}
+		if (b == 4)
+		{
+			return  "fourteen";
+		}
+		if (b == 5)
+		{
+			return  "fifteen";
+		}
+		if (b == 6)
+		{
+			return  "sixteen";
+		}
+		if (b == 7)
+		{
+			return  "seventeen";
+		}
+		if (b == 8)
+		{
+			return  "eighteen";
+		}
+		if (b == 9)
+		{
+			return  "nineteen";
+		}
+	}
+	if (a == 2)
+	{
+		if (b == 0)
+		{
+			return  "twenty";
+		}
+		else
+		{
+			return  "twenty-";
+			digit(b);
+		}
+	}
+	if (a == 3)
+	{
+		if (b == 0)
+		{
+			return  "thirty";
+		}
+		else
+		{
+			return  "thirty-";
+			digit(b);
+		}
+	}
+	if (a == 4)
+	{
+		if (b == 0)
+		{
+			return  "forty";
+		}
+		else
+		{
+			return  "forty-";
+			digit(b);
+		}
+	}
+}
+int main()
+{
+	cout << "Write an integer in the range of 10-40" << endl;
+	int a, b;
+	cin >> a;
+	if (a < 10 || a>40) {
+		cout << "an integer should be in the range of 10-40"<< endl;
+		return 0;
+	}
+	b = a % 10;
+	a = a/ 10;
+	if (a == 1) {
+		cout << numb(a, b) << " educational task" << endl;
+		return 0;
+	}
+	cout << numb(a, b) << digit(b) << " educational task" << endl;
+	return 0;
+}
+*/
+//12.4
+/*
+string digit(int c)
+{
+	if (c == 0)
+	{
+		return "";
+	}
+	if (c == 1)
+	{
+		return "one ";
+	}
+	if (c == 2)
+	{
+		return  "two ";
+	}
+	if (c == 3)
+	{
+		return  "three ";
+	}
+	if (c == 4)
+	{
+		return  "four ";
+	}
+	if (c == 5)
+	{
+		return  "five ";
+	}
+	if (c == 6)
+	{
+		return  "six ";
+	}
+	if (c == 7)
+	{
+		return  "seven ";
+	}
+	if (c == 8)
+	{
+		return  "eight ";
+	}
+	if (c == 9)
+	{
+		return  "nine ";
+	}
+}
+
+string numb(int b, int c)
+{
+	if (b == 0)
+	{
+		return "";
+	}
+	if (b == 1)
+	{
+		if (c == 0)
+		{
+			return  "ten";
+		}
+		if (c == 1)
+		{
+			return  "eleven";
+		}
+		if (c == 2)
+		{
+			return  "twelve";
+		}
+		if (c == 3)
+		{
+			return  "thirteen";
+		}
+		if (c == 4)
+		{
+			return  "fourteen";
+		}
+		if (c == 5)
+		{
+			return  "fifteen";
+		}
+		if (c == 6)
+		{
+			return  "sixteen";
+		}
+		if (c == 7)
+		{
+			return  "seventeen";
+		}
+		if (c == 8)
+		{
+			return  "eighteen";
+		}
+		if (c == 9)
+		{
+			return  "nineteen";
+		}
+	}
+	if (b == 2)
+	{
+		if (c == 0)
+		{
+			return  "twenty";
+		}
+		else
+		{
+			return  "twenty-";
+			digit(c);
+		}
+	}
+	if (b == 3)
+	{
+		if (c == 0)
+		{
+			return  "thirty";
+		}
+		else
+		{
+			return  "thirty-";
+			digit(c);
+		}
+	}
+	if (b == 4)
+	{
+		if (c == 0)
+		{
+			return  "forty";
+		}
+		else
+		{
+			return  "forty-";
+			digit(c);
+		}
+	}
+	if (b == 5)
+	{
+		if (c == 0)
+		{
+			return "fifty";
+		}
+		else
+		{
+			return "fifty-";
+		}
+	}
+	if (b == 6)
+	{
+		if (c == 0)
+		{
+			return "sixty";
+		}
+		else
+		{
+			return "sixty-";
+		}
+	}
+	if (b == 7)
+	{
+		if (c == 0)
+		{
+			return "seventy";
+		}
+		else
+		{
+			return "seventy-";
+		}
+	}
+	if (b == 8)
+	{
+		if (c == 0)
+		{
+			return "eighty ";
+		}
+		else
+		{
+			return "eighty-";
+		}
+	}
+	if (b == 9)
+	{
+		if (c == 0)
+		{
+			return "ninety";
+		}
+		else
+		{
+			return "ninety-";
+		}
+	}
+
+}
+
+string hundr(int a, int c, int b)
+{
+	if ((b != 0) or (c != 0))
+	{
+		return "hundred and ";
+	}
+	else
+	{
+		return "hundred";
+	}
+}
+
+
+int main()
+{
+	int x, a, b, c;
+	cout << "Write an integer in the range 100-999" << endl;
+	cin >> x;
+	if (x < 100 || x>999) {
+		cout << "An integer should be in the range 100-999" << endl;
+		return 0;
+	}
+	a = x / 100;
+	b = x % 10;
+	c = (x / 10) % 10;
+	cout << digit(a) << hundr(a, c, b) << numb(c, b) << digit(b) << endl;
+	return 0;
+}
+*/
+//12.5
+/*
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+string colour(int a)
+{
+	if ((a == 0) or (a == 1))
+	{
+		return "white";
+	}
+	if ((a == 2) or (a == 3))
+	{
+		return "black";
+	}
+	if ((a == 4) or (a == 5))
+	{
+		return "green";
+	}
+	if ((a == 6) or (a == 7))
+	{
+		return "red";
+	}
+	if ((a == 9) or (a == 8))
+	{
+		return "yellow";
+	}
+}
+
+string animal(int b)
+{
+	if (b == 0)
+	{
+		return " monkey";
+	}
+	if (b == 1)
+	{
+		return " chicken";
+	}
+	if (b == 2)
+	{
+		return " dog";
+	}
+	if (b == 3)
+	{
+		return " pig";
+	}
+	if (b == 4)
+	{
+		return " rat";
+	}
+	if (b == 5)
+	{
+		return " cow";
+	}
+	if (b == 6)
+	{
+		return " tiger";
+	}
+	if (b == 7)
+	{
+		return " har";
+	}
+	if (b == 8)
+	{
+		return " dragon";
+	}
+	if (b == 9)
+	{
+		return " snake";
+	}
+	if (b == 10)
+	{
+		return " horse";
+	}
+	if (b == 11)
+	{
+		return " sheep";
+	}
+}
+
+int main()
+{
+	int x, a, b;
+	cout << "Write the year" << endl;
+	cin >> x;
+	a = x % 10;
+	b = x % 12;
+	cout << "The year of the " << colour(a) << animal(b) << endl;
+	return 0;
+}
+*/
