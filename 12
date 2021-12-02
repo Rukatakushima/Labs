@@ -591,10 +591,6 @@ int main()
 */
 //12.5
 /*
-#include<iostream>
-#include<cmath>
-using namespace std;
-
 string colour(int a)
 {
 	if ((a == 0) or (a == 1))
