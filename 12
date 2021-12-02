@@ -585,7 +585,15 @@ int main()
 	a = x / 100;
 	b = x % 10;
 	c = (x / 10) % 10;
-	cout << digit(a) << hundr(a, c, b) << numb(c, b) << digit(b) << endl;
+	if (c==0) {
+		cout << digit(a) << hundr(a, c, b) << digit(b) << endl;
+		return 0;
+	}
+	if (c == 1) {
+		cout << digit(a) << hundr(a, c, b) << numb(c, b) << endl;
+		return 0;
+	}
+	cout <<  digit(a) << hundr(a, c, b) << numb(c, b) << digit(b) <<  endl;
 	return 0;
 }
 */
