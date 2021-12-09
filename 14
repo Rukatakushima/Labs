@@ -126,5 +126,6 @@ int main()
 		z++;
 	}
 	cout << "K = " << z << endl;
+	}
 	*/
-}
+
