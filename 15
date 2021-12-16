@@ -1,0 +1,132 @@
+#include <iostream>
+using namespace std;
+//15.1 Описать функцию PowerA3(A, B), вычисляющую третью степень числа A и возвращающую ее в переменной B (A — входной, B — выходной параметр; оба параметра являются вещественными). С помощью этой функции найти третьи степени пяти данных чисел.
+/*
+float PowerA3(float A)
+{
+	float B = A * A * A;
+	return B;
+}
+int main()
+{
+	float A;
+	cout << "Write 5 numbers" << endl;
+	for (int i = 1; i <= 5; i++)
+	{
+		cin >> A;
+		cout << "The 3rd power = " << PowerA3(A) << endl;
+	}
+}
+*/
+//15.2 2. Описать функцию Sign(X) целого типа, возвращающую для вещественного числа X следующие значения: −1, если X < 0; 0, если X = 0; 1, если X > 0. С помощью этой функции найти значение выражения Sign(A) + Sign(B) для данных вещественных чисел A и B.
+/*
+int Sign(float X)
+{
+	if (X < 0)
+	{
+		return -1;
+	}
+	if (X == 0)
+	{
+		return 0;
+	}
+	if (X > 0)
+	{
+		return 1;
+	}
+	return 0;
+}
+int main()
+{
+	float A, B;
+	cout << "Write A and B" << endl;
+	cin >> A >> B;
+	cout << "Sign(A) + Sign(B) = " << Sign(A) + Sign(B) << endl;
+	return 0;
+}
+*/
+// 15.3. Описать функцию RingS(R1, R2) вещественного типа, находящую площадь кольца, заключенного между двумя окружностями с общим центром и радиусами R1 и R2 (R1 и R2 — вещественные, R1 > R2). С ее помощью найти площади трех колец, для которых даны внешние и внутренние радиусы.
+/*
+double RingS(double R1, double R2)
+{
+	return 3.14 * (R1 * R1 - R2 * R2);
+}
+int main()
+{
+	float R1, R2;
+	cout << "Write R1 and R2 (R1>R2)" << endl;
+	for (int i = 1; i <= 3; i++)
+	{
+		cin >> R1 >> R2;
+		if (R1 < R2)
+		{
+			cout << "R1 < R2!" << endl;
+		}
+		else 
+		{ 
+		cout << "The square of the ring = " << RingS(R1,  R2) << endl;
+		}
+	}
+}
+*/
+// 15.4. Описать функцию Quarter(x, y) целого типа, определяющую номер координатной четверти, в которой находится точка с ненулевыми вещественными координатами (x, y). С помощью этой функции найти номера координатных четвертей для трех точек с данными ненулевыми координатами
+/*
+int Quarter(float x, float y)
+{
+	if (x > 0 && y > 0)
+	{
+		return 1;
+	}
+	if (x > 0 && y < 0)
+	{
+		return 4;
+	}
+	if (x < 0 && y > 0)
+	{
+		return 2;
+	}
+	if (x < 0 && y < 0)
+	{
+		return 3;
+	}
+}
+int main()
+{
+	float x, y;
+	cout << "Write x and y non-zero coordinates" << endl;
+		for (int i = 1; i <= 3; i++)
+		{
+			cin >> x >> y;
+			cout << "The coordinate quarter has the numberThe coordinate quarter has the number " << Quarter(x, y) << endl;
+		}
+}
+*/
+//15.5. Описать функцию Fact2(N) вещественного типа, вычисляющую двойной факториал: N!!= 1·3·5·. ..·N, если N — нечетное; N!!= 2·4·6·. ..·N, если N — четное(N > 0 — параметр целого типа; вещественное возвращаемое значение используется для того, чтобы избежать целочисленного переполнения при больших значениях N).
+/*
+float Fact2(int N)
+{
+	float f = 1;
+	if (N % 2 != 0)
+	{
+		for (int i = 1; i <= N; i += 2)
+		{
+			f *= i;
+		}
+	}
+	else
+	{
+		for (int i = 2; i <= N; i += 2)
+		{
+			f *= i;
+		}
+	}
+	return f;
+}
+int main()
+{
+	int N;
+	cout << "Write the number" << endl;
+	cin >> N;
+	cout << "The double factorial = " << Fact2(N) << endl;
+}
+*/
