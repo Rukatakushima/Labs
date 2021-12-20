@@ -1,0 +1,122 @@
+//16
+#include <iostream>
+using namespace std;
+
+//1
+/*
+int main()
+{
+	int n;
+	cout << "Write N>0" << endl;
+	cin >> n;
+	if (n <= 0)
+	{
+		cout << "N<=0" << endl;
+		return 0;
+	}
+	int* a = new int[n];
+	a[0] = 1;
+	cout << "The array, containing N first positive odd numbers, is";
+	for (int i = 1; i < n; i++)
+	{
+		a[i] = i*2-1;
+		cout << " " << a[i];
+	}
+}
+*/
+//2
+/*
+int main()
+{
+	int n, a, d;
+	cout << "Write N>1, the first term A and denominator D of the geometric progression" << endl;
+	cin >> n >> a >> d;
+	if (n <= 1)
+	{
+		cout << "N<=1" << endl;
+		return 0;
+	}
+	int* x = new int[n];
+	x[0] = a;
+	cout << "The array containing the first N members of a given progression is";
+	int z = 1;
+	for (int i = 1; i <= n; i++)
+	{
+		x[i] = a * z;
+		z *= d;
+		cout << " " << x[i];
+	}
+}
+*/
+//3
+/*
+int main()
+{
+	int n, a, b;
+	cout << "Write N>2, A and B" << endl;
+	cin >> n >> a >> b;
+	if (n <= 2)
+	{
+		cout << "N<=2" << endl;
+		return 0;
+	}
+	int* x = new int[n];
+	x[0] = a;
+	x[1] = b;
+	cout << "The array is " << x[0] << " " << x[1];
+	for (int i = 2; i <= n; i++)
+	{
+		x[i] = x[i - 1] + x[i - 2];
+		cout << " " << x[i];
+	}
+}
+*/
+//4
+/*
+int main()
+{
+	int n, i;
+	cout << "Write N (size of array)" << endl;
+	cin >> n;
+	int* x = new int[n];
+	cout << "Write A (the array)" << endl;
+	for (i = 0; i < n; i++)
+	{
+		cin >> x[i];
+	}
+	cout << "array is " << endl;
+	for (i = 0; i < n / 2; i++)
+	{
+		cout << x[i] << " " << x[n - i - 1] << " ";
+	}
+	if (n % 2 != 0)
+	{
+		cout << x[n / 2] << endl;
+	}
+	cout << endl;
+}
+*/
+//5
+/*
+int main()
+{
+	int n, i;
+	cout << "Write N (size of array)" << endl;
+	cin >> n;
+	int* x = new int[n];
+	cout << "Write A (the array)" << endl;
+	for (i = 0; i < n; i++)
+	{
+		cin >> x[i];
+	}
+	cout << "array (first, its elements with odd numbers in ascending order of numbers, and then - elements with even numbers in descending order of numbers) is " << endl;
+	for (i = 0; i < n; i += 2)
+	{
+		cout << x[i] << " ";
+	}
+	for (i = n - 1 - n % 2; i >= 0; i -= 2)
+	{
+		cout << x[i] << " ";
+	}
+}
+*/
