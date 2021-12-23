@@ -17,7 +17,7 @@ int main()
 	int* a = new int[n];
 	a[0] = 1;
 	cout << "The array, containing N first positive odd numbers, is";
-	for (int i = 1; i < n; i++)
+	for (int i = 1; i <= n; i++)
 	{
 		a[i] = i*2-1;
 		cout << " " << a[i];
